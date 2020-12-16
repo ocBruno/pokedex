@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+## Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pokedex
+
+## Description
+
+This project is similar to a pokedex as it is used for searching, collecting, viewing and managing collected pokemons!
+
+## Pokedex Roadmap
+
+- [x] Bootstrap project
+- [] Configure dependencies
+- [] Search pokemons by name
+- [] Add pokemon to pokedex favorites using redux
+- [] View the pokedex's favorite pokemons list
+- [] Remove pokemon from pokedex's favorite pokemon list
+
+## Technologies Used
+
+Jest (https://jestjs.io/docs/en/getting-started) <br />
+Bootstrap / Reactstrap (https://reactstrap.github.io/) <br/>
+React Router (https://reactrouter.com/)
+React (https://reactjs.org) <br/>
+Create React App (https://facebook.github.io/create-react-app/docs/getting-started) <br/>
+Redux (https://redux.js.org/introduction/getting-started) <br/>
+Thunk-middleware (https://redux.js.org/recipes/configuring-your-store/#extending-redux-functionality) <br/>
+Yarn (https://classic.yarnpkg.com/en/docs/) <br/>
+Eslint (https://eslint.org/) <br/>
+Prettier (https://prettier.io/docs/en/) <br/>
+VSCode (https://code.visualstudio.com/docs) <br/>
+
+## Setup
+
+1. Install dependencies w/ `yarn install`
+2. Run app w/ `yarn start`
+
+- Optional
+
+1. Install VSCode extensions for eslint and prettier
 
 ## Available Scripts
 
@@ -39,32 +75,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/PokemonFilter`)
+3. Commit your Changes (`git commit -m 'Add PokemonFilter'`)
+4. Push to the Branch (`git push origin feature/PokemonFilter`)
+5. Open a Pull Request
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Bruno Costa - brunocgmxus@gmail.com
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/ocbruno/pokedex](https://github.com/ocbruno/pokedex)
