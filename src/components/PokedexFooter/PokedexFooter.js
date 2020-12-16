@@ -1,6 +1,10 @@
 import './PokedexFooter.css'
 import React from 'react'
 
+/**
+ * @export function PokedexFooter
+ * @return { React.FunctionComponent }
+ */
 export default function PokedexFooter() {
   return (
     <footer class="footer">

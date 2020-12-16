@@ -9,7 +9,7 @@ This project is similar to a pokedex as it is used for searching, collecting, vi
 ## Pokedex Roadmap
 
 - [x] Bootstrap project
-- [] Configure dependencies
+- [x] Configure dependencies
 - [] Search pokemons by name
 - [] Add pokemon to pokedex favorites using redux
 - [] View the pokedex's favorite pokemons list
@@ -24,6 +24,7 @@ React (https://reactjs.org) <br/>
 Create React App (https://facebook.github.io/create-react-app/docs/getting-started) <br/>
 Redux (https://redux.js.org/introduction/getting-started) <br/>
 Thunk-middleware (https://redux.js.org/recipes/configuring-your-store/#extending-redux-functionality) <br/>
+JSDoc (https://jsdoc.app/) <br/>
 Yarn (https://classic.yarnpkg.com/en/docs/) <br/>
 Eslint (https://eslint.org/) <br/>
 Prettier (https://prettier.io/docs/en/) <br/>

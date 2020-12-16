@@ -2,6 +2,10 @@ import './PokedexSearch.css'
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
+/**
+ * @export function PokedexSearch
+ * @return { React.FunctionComponent }
+ */
 export default function PokedexSearch() {
   return (
     <div>
