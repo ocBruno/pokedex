@@ -22,13 +22,14 @@ Bootstrap / Reactstrap (https://reactstrap.github.io/) <br/>
 React Router (https://reactrouter.com/)
 React (https://reactjs.org) <br/>
 Create React App (https://facebook.github.io/create-react-app/docs/getting-started) <br/>
-Redux (https://redux.js.org/introduction/getting-started) <br/>
+Redux & Redux Toolkit (https://redux.js.org/introduction/getting-started) <br/>
 Thunk-middleware (https://redux.js.org/recipes/configuring-your-store/#extending-redux-functionality) <br/>
 JSDoc (https://jsdoc.app/) <br/>
 Yarn (https://classic.yarnpkg.com/en/docs/) <br/>
 Eslint (https://eslint.org/) <br/>
 Prettier (https://prettier.io/docs/en/) <br/>
 VSCode (https://code.visualstudio.com/docs) <br/>
+Pokeapi (https://pokeapi.co/) <br/>
 
 ## Setup
 
@@ -37,7 +38,7 @@ VSCode (https://code.visualstudio.com/docs) <br/>
 
 - Optional
 
-1. Install VSCode extensions for eslint and prettier
+1. Install VSCode extensions for eslint, prettier, JSDoc, Jest and/or React
 
 ## Available Scripts
 

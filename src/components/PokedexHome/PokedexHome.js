@@ -7,5 +7,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
  * @return { React.FunctionComponent }
  */
 export default function PokedexHome() {
-  return <div>Home</div>
+  return (
+    <div>
+      <h2>Pesquise e colecione seus pokemons favoritos!</h2>
+    </div>
+  )
 }

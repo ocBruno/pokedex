@@ -9,14 +9,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 export default function PokedexSearch() {
   return (
     <div>
-      <form class="form-inline mt-2 mt-md-0">
+      <form className="form-inline mt-2 mt-md-0">
         <input
-          class="form-control mr-sm-2"
+          className="form-control mr-sm-2"
           type="text"
           placeholder="Search"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
         </button>
       </form>

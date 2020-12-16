@@ -7,8 +7,8 @@ import React from 'react'
  */
 export default function PokedexFooter() {
   return (
-    <footer class="footer">
-      <div class="container">
+    <footer id="app_footer" className="footer">
+      <div className="container">
         <div>
           Icons made by{' '}
           <a

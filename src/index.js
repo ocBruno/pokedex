@@ -1,20 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
 import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals'
 
-import { applyMiddleware, createStore, compose } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import rootReducer from './rootReducer'
-import loggerMiddleware from './middleware/logger'
-import monitorReducerEnhancer from './enhancers/monitorReducer'
 import App from './components/App'
-
-const middlewareEnhancer = applyMiddleware(loggerMiddleware, thunkMiddleware)
-const composedEnhancers = compose(middlewareEnhancer, monitorReducerEnhancer)
-
-const store = createStore(rootReducer, undefined, composedEnhancers)
+import store from './store'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
