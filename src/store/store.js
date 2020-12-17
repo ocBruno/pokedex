@@ -6,7 +6,7 @@ import getPokemonByNameReducer from './getPokemonByNameSlice'
 const store = configureStore({
   reducer: {
     favoritePokemons: favoritePokemonsReducer,
-    getPokemonByName: getPokemonByNameReducer,
+    getPokemon: getPokemonByNameReducer,
   },
 })
 

@@ -18,17 +18,17 @@ export default favoritePokemonsSlice.reducer
 
 const { updateFavoritePokemons } = favoritePokemonsSlice.actions
 
-export const handleAddPokemonToFavorites = (pokemonObject) => async (
-  dispatch,
-) => {
+export const addPokemonToFavoritesById = (pokemonId) => async (dispatch) => {
   // add new pokemon object to state favorites and return new array
-  dispatch(updateFavoritePokemonsArray(newFavoritePokemonsArray))
+
+  dispatch(updateFavoritePokemons(newFavoritePokemonsArray))
 }
 const {} = favoritePokemonsSlice.actions
 
-export const handleRemovePokemonFromFavorites = (pokemonId) => async (
+export const removePokemonFromFavoritesById = (pokemonId) => async (
   dispatch,
 ) => {
   // find pokemon in state favorites by id and return new array without
-  dispatch(updateFavoritePokemonsArray(newFavoritePokemonsArray))
+
+  dispatch(updateFavoritePokemons(newFavoritePokemonsArray))
 }

@@ -1,45 +1,37 @@
-import axios from 'axios'
 import { createSlice } from '@reduxjs/toolkit'
 
-import { POKEAPI_BASE_URL } from '../pokeapi'
+import { pokeapi } from '../pokeapi/index'
 
 export const getPokemonByNameSlice = createSlice({
   name: 'getPokemonByName',
   initialState: {
-    pokemonFound: {},
+    getPokemonResult: null,
+    getPokemonIsLoading: false,
+    getPokemonError: null,
   },
   reducers: {
     getPokemonByNameLoading: (state, action) => {
       console.log('getPokemonByNameLoading')
-
+      console.log(action)
       return {
         ...state,
-        isLoading: true,
+        getPokemonIsLoading: true,
       }
     },
     getPokemonByNameSuccess: (state, action) => {
       console.log('getPokemonByNameSuccess')
       console.log(action)
-      state.pokemonFound = action.payload
-      state.isLoading = false
+      state.getPokemonResult = action.payload
+      state.getPokemonIsLoading = false
       state.getPokemonError = null
     },
     getPokemonByNameFailed: (state, action) => {
       console.log('getPokemonByNameFailed')
+      console.log(action)
 
-      switch (action.type) {
-        case 'POKEMON_NOT_FOUND': {
-          state.getPokemonError = 'POKEMON_NOT_FOUND'
-        }
-        case 'API_ERROR': {
-          state.getPokemonError = 'API_ERROR'
-        }
-        default: {
-          state.getPokemonError = 'INVALID_ACTION_TYPE_ERROR'
-        }
-      }
-      state.pokemonFound = {}
-      state.isLoading = false
+      state.getPokemonError = action.payload
+      state.getPokemonResult = null
+      state.getPokemonIsLoading = false
     },
   },
 })
@@ -64,15 +56,14 @@ export const getPokemonByName = (pokemonName) => async (dispatch) => {
   dispatch(getPokemonByNameLoading)
   console.log('getting pokemon')
   try {
-    await axios
-      .get(`${POKEAPI_BASE_URL}/${pokemonName}`)
+    await pokeapi
+      .get(`/pokemon/${pokemonName}`)
       .then((response) => dispatch(getPokemonByNameSuccess(response.data)))
   } catch (e) {
     /**
      * TODO: Dispatch error handling action
      */
-    const prevState = state
-    getPokemonByNameFailed(prevState)
+    dispatch(getPokemonByNameFailed(e.message))
     return console.error(e.message)
   }
 }

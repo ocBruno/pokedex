@@ -1,0 +1,11 @@
+#pokedex_search_header {
+  margin-top: 2rem;
+}
+#pokedex_search_container p {
+  margin-bottom: 0.3rem;
+}
+#pokemon_search_input_container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
