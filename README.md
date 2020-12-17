@@ -10,24 +10,29 @@ This project is similar to a pokedex as it is used for searching, collecting, vi
 
 - [x] Bootstrap project
 - [x] Configure dependencies
-- [] Search pokemons by name
-- [] Add pokemon to pokedex favorites using redux
-- [] View the pokedex's favorite pokemons list
-- [] Remove pokemon from pokedex's favorite pokemon list
+- [x] Plan out features, revise and update necessary tools, techonologies and patterns
+- [] Setup redux / slices and refactor necessary
+- [] Integrate PokeAPI
+- [] Features . PokedexSearch . Search pokemons by name
+- [] Features . PokedexFavorites . Create - Add pokemon to pokedex favorites using redux
+- [] Features . PokedexFavorites . List - View the pokedex's favorite pokemons list
+- [] Features . PokedexFavorites . Remove - Remove pokemon from pokedex's favorite pokemon list
+- [] Store pokedex favorites in session storage
+- [] Add unit tests
 
 ## Technologies Used
 
-Jest (https://jestjs.io/docs/en/getting-started) <br />
-Bootstrap / Reactstrap (https://reactstrap.github.io/) <br/>
-React Router (https://reactrouter.com/)
 React (https://reactjs.org) <br/>
+React Router (https://reactrouter.com/)
 Create React App (https://facebook.github.io/create-react-app/docs/getting-started) <br/>
 Redux & Redux Toolkit (https://redux.js.org/introduction/getting-started) <br/>
-Thunk-middleware (https://redux.js.org/recipes/configuring-your-store/#extending-redux-functionality) <br/>
-JSDoc (https://jsdoc.app/) <br/>
+Axios (https://github.com/axios/axios) <br/>
+Bootstrap / Reactstrap (https://reactstrap.github.io/) <br/>
+Jest (https://jestjs.io/docs/en/getting-started) <br />
 Yarn (https://classic.yarnpkg.com/en/docs/) <br/>
 Eslint (https://eslint.org/) <br/>
 Prettier (https://prettier.io/docs/en/) <br/>
+JSDoc (https://jsdoc.app/) <br/>
 VSCode (https://code.visualstudio.com/docs) <br/>
 Pokeapi (https://pokeapi.co/) <br/>
 

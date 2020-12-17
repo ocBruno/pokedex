@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import pokedexFavoritesReducer from './features/pokedexFavorites/pokedexFavoritesSlice'
-import pokedexSearchReducer from './features/pokedexSearch/pokedexSearchSlice'
+import favoritePokemonsReducer from './store/favoritePokemonsSlice'
+import getPokemonByNameReducer from './store/getPokemonByNameSlice'
 
 const store = configureStore({
   reducer: {
-    pokedexFavorites: pokedexFavoritesReducer,
-    pokedexSearch: pokedexSearchReducer,
+    favoritePokemons: favoritePokemonsReducer,
+    getPokemonByName: getPokemonByNameReducer,
   },
 })
 
