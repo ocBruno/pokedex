@@ -10,17 +10,23 @@ export const getPokemonByNameSlice = createSlice({
   },
   reducers: {
     getPokemonByNameLoading: (state, action) => {
+      console.log('getPokemonByNameLoading')
+
       return {
         ...state,
         isLoading: true,
       }
     },
     getPokemonByNameSuccess: (state, action) => {
+      console.log('getPokemonByNameSuccess')
+      console.log(action)
       state.pokemonFound = action.payload
       state.isLoading = false
       state.getPokemonError = null
     },
     getPokemonByNameFailed: (state, action) => {
+      console.log('getPokemonByNameFailed')
+
       switch (action.type) {
         case 'POKEMON_NOT_FOUND': {
           state.getPokemonError = 'POKEMON_NOT_FOUND'
@@ -42,7 +48,11 @@ export default getPokemonByNameSlice.reducer
 
 // Actions
 
-const { getPokemonByNameSuccess } = slice.actions
+const {
+  getPokemonByNameSuccess,
+  getPokemonByNameLoading,
+  getPokemonByNameFailed,
+} = getPokemonByNameSlice.actions
 
 /**
  * getPokemonByName
@@ -52,6 +62,7 @@ const { getPokemonByNameSuccess } = slice.actions
 
 export const getPokemonByName = (pokemonName) => async (dispatch) => {
   dispatch(getPokemonByNameLoading)
+  console.log('getting pokemon')
   try {
     await axios
       .get(`${POKEAPI_BASE_URL}/${pokemonName}`)

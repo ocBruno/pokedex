@@ -1,29 +1,40 @@
-import logo from '../assets/logo.svg'
-import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import PokedexHome from './PokedexHome/PokedexHome'
-import PokedexSearch from './PokedexSearch/PokedexSearch'
-import PokedexFavorites from './PokedexFavorites/PokedexFavorites'
-import PokedexNavbar from './PokedexNavbar/PokedexNavbar'
-import PokedexFooter from './PokedexFooter/PokedexFooter'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  withRouter,
+} from 'react-router-dom'
+
+// Shared
+import PokedexNavbar from './shared/PokedexNavbar/PokedexNavbar'
+import PokedexFooter from './shared/PokedexFooter/PokedexFooter'
+
+// Pages
+import PokedexHome from './pages/PokedexHome/PokedexHome'
+import PokedexSearch from './pages/PokedexSearch/PokedexSearch'
+import PokedexFavorites from './pages/PokedexFavorites/PokedexFavorites'
+
+import './App.css'
+
+const RoutedPokedexHome = withRouter(PokedexHome)
+const RoutedPokedexSearch = withRouter(PokedexSearch)
+const RoutedPokedexFavorites = withRouter(PokedexFavorites)
 
 export default function App() {
   return (
     <Router>
       <PokedexNavbar />
       <main role="main" id="page_container">
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/pokedex/favoritos">
-            <PokedexFavorites />
+            <RoutedPokedexFavorites />
           </Route>
           <Route path="/pokedex/busca">
-            <PokedexSearch />
+            <RoutedPokedexSearch />
           </Route>
-          <Route path="/pokedex">
-            <PokedexHome />
+          <Route path="/">
+            <RoutedPokedexHome />
           </Route>
         </Switch>
       </main>

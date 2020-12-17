@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import favoritePokemonsReducer from './store/favoritePokemonsSlice'
-import getPokemonByNameReducer from './store/getPokemonByNameSlice'
+import favoritePokemonsReducer from './favoritePokemonsSlice'
+import getPokemonByNameReducer from './getPokemonByNameSlice'
 
 const store = configureStore({
   reducer: {

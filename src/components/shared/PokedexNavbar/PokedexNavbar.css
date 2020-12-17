@@ -1,0 +1,28 @@
+#pokedex_logo {
+  width: 1.5rem;
+}
+.navbar {
+  background: rgb(120, 143, 255);
+}
+.navbar a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(38, 38, 38);
+  padding: 0;
+}
+.navbar #pokedex_title {
+  font-size: 2rem;
+}
+.navbar a:hover {
+  color: rgb(38, 38, 38);
+}
+.navbar-nav {
+  margin-top: auto;
+}
+#navbarCollapse {
+  margin-top: auto;
+  margin-bottom: 0.42rem;
+}
+ul {
+  margin-top: auto;
+  margin-bottom: 0;
+}

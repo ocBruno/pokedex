@@ -10,12 +10,12 @@ import PokedexLogo from './PokedexLogo.svg'
 export default function PokedexNavbar() {
   return (
     <header>
-      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav className="navbar navbar-expand-md fixed-top">
         <img id="pokedex_logo" src={PokedexLogo} alt="Pokedex" />
 
-        <a className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand" id="pokedex_title">
           Pokedex
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,7 +30,7 @@ export default function PokedexNavbar() {
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/pokedex">
+              <Link className="nav-link" to="/">
                 Inicio
               </Link>
             </li>
