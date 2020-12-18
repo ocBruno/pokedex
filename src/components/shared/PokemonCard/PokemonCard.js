@@ -14,16 +14,18 @@ import {
 export default function PokemonCard(props) {
   const dispatch = useDispatch()
   const favoritePokemons = useSelector((state) => state.favoritePokemons)
-  let isPokemonFavorited
+  let isPokemonFavorited = false
   // set dynamic add / remove button depending on if pokemon already favorited
-  console.log(favoritePokemons.favoritePokemons)
-  if (favoritePokemons.favoritePokemons.length > 0) {
-    isPokemonFavorited = favoritePokemons.favoritePokemons.includes(
-      props.pokemon,
-    )
+
+  for (let i = 0; i < favoritePokemons.favoritePokemons.length; i++) {
+    if (favoritePokemons.favoritePokemons[i].id === props.pokemon.id) {
+      isPokemonFavorited = true
+      break
+    }
   }
+
+  console.log(isPokemonFavorited)
   useEffect(() => {
-    console.log(isPokemonFavorited)
     console.log(favoritePokemons.favoritePokemons)
   })
   const handleAddPokemonToFavorites = (event) => {
@@ -31,13 +33,17 @@ export default function PokemonCard(props) {
     const pokemon = props.pokemon
     console.log(props)
     console.log(favoritePokemons)
-    dispatch(addPokemonToFavorites(pokemon))
+    if (isPokemonFavorited === false) {
+      dispatch(addPokemonToFavorites(pokemon))
+    }
   }
 
   const handleRemovePokemonFromFavorites = (event) => {
     event.preventDefault()
     const pokemon = props.pokemon
-    dispatch(removePokemonFromFavorites(pokemon))
+    if (isPokemonFavorited === true) {
+      dispatch(removePokemonFromFavorites(pokemon))
+    }
   }
 
   return (
