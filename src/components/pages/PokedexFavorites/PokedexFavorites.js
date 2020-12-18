@@ -1,29 +1,33 @@
 import './PokedexFavorites.css'
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import PokemonCard from '../../shared/PokemonCard/PokemonCard'
 
 /**
  * @export function PokedexFavorites
  * @return { React.FunctionComponent }
  */
 export default function PokedexFavorites(props) {
-  /**
-   * handlePageReturn
-   * gos back the active history object
-   * @param {Event} event
-   */
-  const handlePageReturn = (event) => {
-    event.preventDefault()
-    props.history.goBack()
-  }
+  const favoritePokemons = useSelector((state) => state.favoritePokemons)
 
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link onClick={handlePageReturn}>Voltar</Link>
-        </li>
-      </ul>
-    </nav>
+    <div id="pokedex_favorites_container">
+      {favoritePokemons.favoritePokemons.length === 0 ? (
+        <>
+          Nenhum pokemon favorito adicionado.. Busque um pokemon e adicione-lo
+          aos seus favoritos!
+        </>
+      ) : (
+        favoritePokemons.favoritePokemons.map((favoritePokemon) => {
+          return (
+            <PokemonCard
+              pokemon={favoritePokemon}
+              key={favoritePokemon.id}
+              isFavorite={true}
+            />
+          )
+        })
+      )}
+    </div>
   )
 }

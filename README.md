@@ -11,9 +11,9 @@ This project is similar to a pokedex as it is used for searching, collecting, vi
 - [x] Bootstrap project
 - [x] Configure dependencies
 - [x] Plan out features, revise and update necessary tools, techonologies and patterns
-- [] Setup redux / slices and refactor necessary
-- [] Integrate PokeAPI
-- [] Features . PokedexSearch . Search pokemons by name
+- [x] Setup redux / slices and refactor necessary
+- [x] Integrate PokeAPI
+- [x] Features . PokedexSearch . Search pokemons by name
 - [] Features . PokedexFavorites . Create - Add pokemon to pokedex favorites using redux
 - [] Features . PokedexFavorites . List - View the pokedex's favorite pokemons list
 - [] Features . PokedexFavorites . Remove - Remove pokemon from pokedex's favorite pokemon list

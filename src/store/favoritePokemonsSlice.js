@@ -9,6 +9,9 @@ export const favoritePokemonsSlice = createSlice({
     updateFavoritePokemons: (state, action) => {
       state.favoritePokemons = action.payload
     },
+    getFavoritePokemons: (state, action) => {
+      return state.favoritePokemons
+    },
   },
 })
 
@@ -16,19 +19,21 @@ export default favoritePokemonsSlice.reducer
 
 // Actions
 
-const { updateFavoritePokemons } = favoritePokemonsSlice.actions
+const {
+  updateFavoritePokemons,
+  getFavoritePokemons,
+} = favoritePokemonsSlice.actions
 
-export const addPokemonToFavoritesById = (pokemonId) => async (dispatch) => {
-  // add new pokemon object to state favorites and return new array
+export const addPokemonToFavorites = (pokemon) => async (dispatch) => {
+  // add new pokemon object to active state favorites and return new array
+
+  const newFavoritePokemonsArray = [pokemon]
+  console.log(newFavoritePokemonsArray)
 
   dispatch(updateFavoritePokemons(newFavoritePokemonsArray))
 }
-const {} = favoritePokemonsSlice.actions
 
-export const removePokemonFromFavoritesById = (pokemonId) => async (
-  dispatch,
-) => {
-  // find pokemon in state favorites by id and return new array without
-
-  dispatch(updateFavoritePokemons(newFavoritePokemonsArray))
+export const removePokemonFromFavorites = (pokemon) => async (dispatch) => {
+  // find pokemon in state favorites and return new array without
+  // dispatch(updateFavoritePokemons(newFavoritePokemonsArray))
 }

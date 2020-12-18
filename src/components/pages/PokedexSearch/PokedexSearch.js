@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { getPokemonByName } from '../../../store/getPokemonByNameSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import PokemonCard from '../../shared/PokemonCard/PokemonCard'
+import { isPokemonFavoriteCheck } from '../../../store/favoritePokemonsSlice'
 
 /**
  * @export function PokedexSearch
@@ -12,15 +13,8 @@ import PokemonCard from '../../shared/PokemonCard/PokemonCard'
 export default function PokedexSearch() {
   const dispatch = useDispatch()
   const getPokemon = useSelector((state) => state.getPokemon)
-  console.log(getPokemon)
+  const favoritePokemons = useSelector((state) => state.favoritePokemons)
 
-  useEffect(() => {
-    if (getPokemon.getPokemonResult !== null) {
-      console.log(getPokemon.getPokemonResult)
-    } else {
-      console.log(getPokemon)
-    }
-  })
   const handleGetPokemonByNameEvent = (event) => {
     event.preventDefault()
     const pokemonName = document.getElementById('pokemon_name_input').value
