@@ -1,5 +1,5 @@
 import './PokemonCard.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import {
@@ -14,9 +14,18 @@ import {
 export default function PokemonCard(props) {
   const dispatch = useDispatch()
   const favoritePokemons = useSelector((state) => state.favoritePokemons)
+  let isPokemonFavorited
   // set dynamic add / remove button depending on if pokemon already favorited
-  const isPokemonFavorited = favoritePokemons.includes(props.pokemon)
-
+  console.log(favoritePokemons.favoritePokemons)
+  if (favoritePokemons.favoritePokemons.length > 0) {
+    isPokemonFavorited = favoritePokemons.favoritePokemons.includes(
+      props.pokemon,
+    )
+  }
+  useEffect(() => {
+    console.log(isPokemonFavorited)
+    console.log(favoritePokemons.favoritePokemons)
+  })
   const handleAddPokemonToFavorites = (event) => {
     event.preventDefault()
     const pokemon = props.pokemon
@@ -46,7 +55,7 @@ export default function PokemonCard(props) {
           </div>
         ))}
       </div>
-      {props.isFavorite === true ? (
+      {isPokemonFavorited === true ? (
         <button
           className="add-to-favorites-btn btn btn-outline-dark mt-3 ml-1"
           type="button"
