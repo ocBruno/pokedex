@@ -1,8 +1,7 @@
-import { render, screen } from '@testing-library/react'
-import PokedexFooter from './PokedexFooter'
+// import { render, screen } from '@testing-library/react'
+// import PokedexFooter from './PokedexFooter'
 
-test('renders learn react link', () => {
+// TODO: finish test
+xtest('pokedex footer renders necessary elements', () => {
   render(<PokedexFooter />)
-  const linkElement = screen.getByText(/learn react/i)
-  expect(linkElement).toBeInTheDocument()
 })

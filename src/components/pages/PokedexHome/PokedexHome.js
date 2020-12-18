@@ -1,9 +1,9 @@
-import './PokedexHome.css'
 import React from 'react'
 
+import './PokedexHome.css'
+
 /**
- * @export function PokedexHome
- * @return { React.FunctionComponent }
+ * Pokedex Home Page
  */
 export default function PokedexHome() {
   return (

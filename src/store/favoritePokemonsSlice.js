@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { useSelector } from 'react-redux'
 
 export const favoritePokemonsSlice = createSlice({
   name: 'favoritePokemons',
@@ -10,9 +9,6 @@ export const favoritePokemonsSlice = createSlice({
     updateFavoritePokemons: (state, action) => {
       state.favoritePokemons = action.payload
     },
-    getFavoritePokemons: (state, action) => {
-      return state.favoritePokemons
-    },
   },
 })
 
@@ -20,16 +16,17 @@ export default favoritePokemonsSlice.reducer
 
 // Actions
 
-const {
-  updateFavoritePokemons,
-  getFavoritePokemons,
-} = favoritePokemonsSlice.actions
+const { updateFavoritePokemons } = favoritePokemonsSlice.actions
 
+/**
+ * @export function addPokemonToFavorites
+ * @param {pokeapi.PokemonObject} pokemon
+ * add new pokemon state favorites array and dispatch updated array
+ */
 export const addPokemonToFavorites = (pokemon) => async (
   dispatch,
   getState,
 ) => {
-  // add new pokemon object to active state favorites and return new array
   const state = getState()
   const updatedFavoritePokemonsArray = [
     ...state.favoritePokemons.favoritePokemons,
@@ -38,11 +35,15 @@ export const addPokemonToFavorites = (pokemon) => async (
   dispatch(updateFavoritePokemons(updatedFavoritePokemonsArray))
 }
 
+/**
+ * @export function removePokemonFromFavorites
+ * @param {pokeapi.PokemonObject} pokemon
+ * remove pokemon from state favorites array and dispatch updated array
+ */
 export const removePokemonFromFavorites = (pokemon) => async (
   dispatch,
   getState,
 ) => {
-  // find pokemon in state favorites and return new array without
   const state = getState()
 
   const updatedFavoritePokemonsArray = [
@@ -50,6 +51,5 @@ export const removePokemonFromFavorites = (pokemon) => async (
   ]
   const indexOfPokemonToRemove = updatedFavoritePokemonsArray.indexOf(pokemon)
   updatedFavoritePokemonsArray.splice(indexOfPokemonToRemove, 1)
-  console.log(updatedFavoritePokemonsArray)
   dispatch(updateFavoritePokemons(updatedFavoritePokemonsArray))
 }

@@ -14,14 +14,17 @@ This project is similar to a pokedex as it is used for searching, collecting, vi
 - [x] Setup redux / slices and refactor necessary
 - [x] Integrate PokeAPI
 - [x] Features . PokedexSearch . Search pokemons by name
-- [] Features . PokedexFavorites . Create - Add pokemon to pokedex favorites using redux
-- [] Features . PokedexFavorites . List - View the pokedex's favorite pokemons list
-- [] Features . PokedexFavorites . Remove - Remove pokemon from pokedex's favorite pokemon list
-- [] Store pokedex favorites in session storage
+- [x] Features . PokedexFavorites . Create - Add pokemon to pokedex favorites using redux
+- [x] Features . PokedexFavorites . List - View the pokedex's favorite pokemons list
+- [x] Features . PokedexFavorites . Remove - Remove pokemon from pokedex's favorite pokemon list
 - [] Add unit tests
+- [] Improve app theme / design
+- [] Measure performance and apply necessary refactorings
+- [] Improve SEO
 
 ## Technologies Used
 
+Yarn (https://classic.yarnpkg.com/en/docs/) <br/>
 React (https://reactjs.org) <br/>
 React Router (https://reactrouter.com/)
 Create React App (https://facebook.github.io/create-react-app/docs/getting-started) <br/>
@@ -29,7 +32,6 @@ Redux & Redux Toolkit (https://redux.js.org/introduction/getting-started) <br/>
 Axios (https://github.com/axios/axios) <br/>
 Bootstrap / Reactstrap (https://reactstrap.github.io/) <br/>
 Jest (https://jestjs.io/docs/en/getting-started) <br />
-Yarn (https://classic.yarnpkg.com/en/docs/) <br/>
 Eslint (https://eslint.org/) <br/>
 Prettier (https://prettier.io/docs/en/) <br/>
 JSDoc (https://jsdoc.app/) <br/>
@@ -38,7 +40,7 @@ Pokeapi (https://pokeapi.co/) <br/>
 
 ## Setup
 
-1. Install dependencies w/ `yarn install`
+1. Install dependencies w/ `yarn`
 2. Run app w/ `yarn start`
 
 - Optional
@@ -56,6 +58,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### `yarn lint`
+
+Lints the project files according to the project `.eslintrc` config file and following regex pattern.\
+`eslint "./src/**/*.{js, jsx}"`
 
 ### `yarn test`
 

@@ -1,7 +1,9 @@
-import './PokedexNavbar.css'
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
 import PokedexLogo from './PokedexLogo.svg'
+
+import './PokedexNavbar.css'
 
 /**
  * @export function PokedexNavbar

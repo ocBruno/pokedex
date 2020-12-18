@@ -1,5 +1,6 @@
-import './PokedexFooter.css'
 import React from 'react'
+
+import './PokedexFooter.css'
 
 /**
  * @export function PokedexFooter

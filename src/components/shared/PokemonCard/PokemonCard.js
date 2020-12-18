@@ -1,5 +1,4 @@
-import './PokemonCard.css'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import {
@@ -7,15 +6,18 @@ import {
   removePokemonFromFavorites,
 } from '../../../store/favoritePokemonsSlice'
 
+import './PokemonCard.css'
+
 /**
- * @export function PokemonCard
- * @return { React.FunctionComponent }
+ * Compact pokemon ui card
+ * describes the pokemon and allows to add/remove from favorites
  */
 export default function PokemonCard(props) {
   const dispatch = useDispatch()
   const favoritePokemons = useSelector((state) => state.favoritePokemons)
+
+  // check if pokemon already favorited
   let isPokemonFavorited = false
-  // set dynamic add / remove button depending on if pokemon already favorited
 
   for (let i = 0; i < favoritePokemons.favoritePokemons.length; i++) {
     if (favoritePokemons.favoritePokemons[i].id === props.pokemon.id) {
@@ -24,25 +26,27 @@ export default function PokemonCard(props) {
     }
   }
 
-  console.log(isPokemonFavorited)
-  useEffect(() => {
-    console.log(favoritePokemons.favoritePokemons)
-  })
+  /**
+   * handleAddPokemonToFavorites
+   * @param {*} event
+   * prevent default event and add pokemon to favorites if not favorited
+   */
   const handleAddPokemonToFavorites = (event) => {
     event.preventDefault()
-    const pokemon = props.pokemon
-    console.log(props)
-    console.log(favoritePokemons)
     if (isPokemonFavorited === false) {
-      dispatch(addPokemonToFavorites(pokemon))
+      dispatch(addPokemonToFavorites(props.pokemon))
     }
   }
 
+  /**
+   * handleRemovePokemonFromFavorites
+   * @param {*} event
+   * prevent default event and remove pokemon from favorites if favorited
+   */
   const handleRemovePokemonFromFavorites = (event) => {
     event.preventDefault()
-    const pokemon = props.pokemon
     if (isPokemonFavorited === true) {
-      dispatch(removePokemonFromFavorites(pokemon))
+      dispatch(removePokemonFromFavorites(props.pokemon))
     }
   }
 
@@ -63,7 +67,7 @@ export default function PokemonCard(props) {
       </div>
       {isPokemonFavorited === true ? (
         <button
-          className="add-to-favorites-btn btn btn-outline-dark mt-3 ml-1"
+          className="manage-favorites-btn btn btn-outline-danger ml-1"
           type="button"
           onClick={handleRemovePokemonFromFavorites}
         >
@@ -71,7 +75,7 @@ export default function PokemonCard(props) {
         </button>
       ) : (
         <button
-          className="add-to-favorites-btn btn btn-outline-dark mt-3 ml-1"
+          className="manage-favorites-btn btn btn-outline-primary ml-1"
           type="button"
           onClick={handleAddPokemonToFavorites}
         >

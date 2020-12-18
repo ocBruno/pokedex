@@ -1,8 +1,14 @@
 .pokemon-card {
   background: white;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 22rem;
   padding: 1rem;
   border-radius: 0.6rem;
+  box-shadow: 7px 8px 11px rgb(199, 202, 218);
 }
 .pokemon-name {
   margin-left: 0.3rem;
@@ -14,7 +20,6 @@
 .pokemon-sprite-front {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-left: 2px solid rgb(33, 33, 33);
 }
 .pokemon-card-abilities {
   margin-left: 0.3rem;
@@ -25,6 +30,8 @@
 .pokemon-card-ability-name {
   text-transform: capitalize;
 }
-.add-to-favorites-btn {
+.manage-favorites-btn {
+  width: 12rem;
   font-size: 10pt;
+  margin-top: auto;
 }

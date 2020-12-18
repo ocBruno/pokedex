@@ -1,24 +1,38 @@
-import './PokedexSearch.css'
 import React from 'react'
-import { getPokemonByName } from '../../../store/getPokemonByNameSlice'
 import { useDispatch, useSelector } from 'react-redux'
+
 import PokemonCard from '../../shared/PokemonCard/PokemonCard'
 
+import { getPokemonByName } from '../../../store/getPokemonByNameSlice'
+
+import './PokedexSearch.css'
+
 /**
- * @export function PokedexSearch
- * @return { React.FunctionComponent }
+ * Pokedex Search Page
+ * Allows user to search pokemon by name and returns simple card with info
  */
 export default function PokedexSearch() {
   const dispatch = useDispatch()
   const getPokemon = useSelector((state) => state.getPokemon)
   const favoritePokemons = useSelector((state) => state.favoritePokemons)
 
+  /**
+   * handleGetPokemonByNameEvent
+   * @param {Event} event
+   * dispatches action to find pokemon according to pokemon name search input value
+   */
   const handleGetPokemonByNameEvent = (event) => {
     event.preventDefault()
     const pokemonName = document.getElementById('pokemon_name_input').value
     dispatch(getPokemonByName(pokemonName))
   }
 
+  /**
+   * returnActiveErrorComponent
+   * @param {*} getPokemonErrorType
+   * @return {Element}
+   * returns error component according on error type
+   */
   const returnActiveErrorComponent = (getPokemonErrorType) => {
     if (getPokemonErrorType.includes('404')) {
       return (

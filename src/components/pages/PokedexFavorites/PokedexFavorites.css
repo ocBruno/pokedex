@@ -1,0 +1,16 @@
+#pokedex_favorites_page_container {
+  margin-top: 20px;
+}
+.favorite-pokemons-container {
+  display: flex;
+}
+.favorite-pokemons-container .pokemon-card {
+  margin: 20px 10px;
+}
+#empty_favorites_header {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+}
+#empty_favorites_message {
+  color: rgb(60, 60, 60);
+}
