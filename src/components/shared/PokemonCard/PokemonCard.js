@@ -1,12 +1,12 @@
 import './PokemonCard.css'
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import {
   addPokemonToFavorites,
   removePokemonFromFavorites,
 } from '../../../store/favoritePokemonsSlice'
+
 /**
  * @export function PokemonCard
  * @return { React.FunctionComponent }

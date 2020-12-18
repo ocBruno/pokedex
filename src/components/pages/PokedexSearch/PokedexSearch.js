@@ -1,10 +1,8 @@
 import './PokedexSearch.css'
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React from 'react'
 import { getPokemonByName } from '../../../store/getPokemonByNameSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import PokemonCard from '../../shared/PokemonCard/PokemonCard'
-import { isPokemonFavoriteCheck } from '../../../store/favoritePokemonsSlice'
 
 /**
  * @export function PokedexSearch
